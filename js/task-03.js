@@ -33,8 +33,6 @@ imagesGallery.insertAdjacentHTML("afterbegin", imagesMarkup);
 
 
 
-
-
 // const imagesEl = document.querySelector('.gallery');
 
 // const image = document.createElement('img');
