@@ -1,17 +1,21 @@
-const counterValues = document.querySelector('#value');
-console.log(counterValues)
-const counterValue = [0];
-
+const newValues = document.querySelector('#value');
 const addClick = document.querySelectorAll('#counter button');
-// const addClick = document.querySelector('.increment');
-console.log(addClick[0])
 
+let counterValue = 0;
 
-// addClick[0].addEventListener('click', event => {
-// counterValues += 1;
-// });
+addClick[0].addEventListener('click', removeClick);
 
+function removeClick() {
+    counterValue -= 1;
+    newValues.innerHTML = counterValue;
+};
 
+addClick[1].addEventListener('click', adClick);
+
+function adClick() {
+    counterValue += 1;
+    newValues.innerHTML = counterValue;
+}
 
 
 
@@ -51,18 +55,17 @@ console.log(addClick[0])
 
 
 // const allClicks = document.querySelectorAll('#counter button');
-// const addClick = counterEl[0];
-// const removeClick = counterEl[1];
+
 
 // const counterValues = document.querySelector('#value');
 
-// addClick.addEventListener('click', onAddClick);
+// allClicks[0].addEventListener('click', onAddClick);
 
 // function onAddClick() {
 //     counterValues.textContent -= 1;
 // }
 
-// removeClick.addEventListener('click', onRemoveClick);
+// allClicks[1].addEventListener('click', onRemoveClick);
 
 // function onRemoveClick() {
 //     counterValues.textContent += 1;
