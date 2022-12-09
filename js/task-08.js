@@ -7,10 +7,14 @@ function onFormSubmit(event) {
     const { email, password } =
     event.currentTarget.elements
     
-    if (email.value === '') {
+    if (!email.value || !password.value) {
         alert('Error')
-    } else
-        console.log('email', email.value, 'password', password.value);
+    }
+    const setForm = {
+        email: email.value,
+        password: password.value,
+    };
+    console.log(setForm);      
 
     form.reset(); 
 }
@@ -21,7 +25,18 @@ function onFormSubmit(event) {
 
 
 
+// function onFormSubmit(event) {
+//     event.preventDefault();
+//     const { email, password } =
+//     event.currentTarget.elements
+    
+//     if (email.value === '') {
+//         alert('Error')
+//     } else
+//         console.log('email', email.value, 'password', password.value);
 
+//     form.reset(); 
+// }
 
 
 
